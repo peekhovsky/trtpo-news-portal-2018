@@ -33,6 +33,7 @@ Button | Event
 "Save as draft " | Saves everything that you have made as draft without publishing 
 "Publish" | Publishes your text
 "Sign out" | Goes to plain version of site
+
  You can see mocaps at this [link].
 
 #### 2.3\. User Characteristics <a name="2.3"></a>
