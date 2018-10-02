@@ -24,6 +24,7 @@ This app uses Spring framework for web application and relational database for s
 #### 2.2\. User Interfaces <a name="2.2"></a>
 This app uses Spring framework for web application and SQL database for storing data.
 Interface should be easy for regular user who just read this site. Steps to make it is down below.
+
 Button | Event
 --- | ---
 "Find" | A scroll bar pops up, with which you can adjust the sound
