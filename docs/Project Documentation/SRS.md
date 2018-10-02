@@ -60,6 +60,6 @@ Search | Text field and button “find” to find web page that user need.
 #### 3.2\. Non-Functional Requierements <a name="3.2"></a>
 ##### 3.2.1\. Software Quality Attributes <a name="3.2.1"></a>
 ##### 3.2.1.1 External Quality Criteria <a name="3.2.1.1"></a>
-That work fast in every device that is popular now (nobody wants to use low-speed resources). Furthermore, that is important to make simple interface, and beautiful design due to users like to use well-done portals. 
+That should work fast in every device that is popular now (nobody wants to use low-speed resources). Furthermore, that is important to make simple interface, and beautiful design due to users like to use good-looking pages. 
 ### 4\. Analogues <a name="4"></a>
-There is some analogues. User can make simple sites using [Blogspot](https://www.blogger.com/) and [Wix](https://wix.com/)
+There is some analogues. User can make simple sites using [Blogspot](https://www.blogger.com/) and [Wix](https://wix.com/).
