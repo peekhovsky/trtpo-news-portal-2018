@@ -62,4 +62,4 @@ Searching |  Website should have text field and button “find” to find any we
 ##### 3.2.1.1 External Quality Criteria <a name="3.2.1.1"></a>
 That should work fast in every device that is popular now (nobody wants to use low-speed resources). Furthermore, that is important to make simple interface and beautiful design due to users like to use good-looking pages. As result it should be more popular.
 ### 4\. Analogues <a name="4"></a>
-There is some analogues. User can make simple sites using [Blogspot](https://www.blogger.com/) and [Wix](https://wix.com/).
+There is some analogues. User can make simple sites using [Blogspot](https://www.blogger.com/) and [Wix](https://wix.com/). The main disadvantage of that site is that sites have excess of functionality. Our project simplifies the process of editing news. 
