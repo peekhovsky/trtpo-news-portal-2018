@@ -34,7 +34,7 @@ Button | Event
 "Publish" | Publishes your text
 "Sign out" | Goes to plain version of site
 
-There are mocaps of [main page](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/Mockups/main-page.png) and [news editing](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/Mockups/news-editing.png)
+There are mocaps of [main page](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/Mockups/main-page.png) and [news editing](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/Mockups/news-editing.png).
  
 #### 2.3\. User Characteristics <a name="2.3"></a>
 Target Users:
