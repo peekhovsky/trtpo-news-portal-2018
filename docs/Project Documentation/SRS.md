@@ -23,8 +23,8 @@ That is what we are going to make in this project.
 This app uses Spring framework for web application and relational database for storing data.
 #### 2.2\. User Interfaces <a name="2.2"></a>
 This app uses Spring framework for web application and SQL database for storing data.
-There are mocaps of [main page](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/main-page.png) and [news editing](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/news-editing.png).
-Interface should be simple for regular user who just read this site. Description of what it should do is down below.
+There are mocups of [main page](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/main-page.png) and [news editing](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/news-editing.png).
+Interface should be simple for regular user who just read this site. Description of what every button should do is down below.
 
 Button | Event
 --- | ---
@@ -51,15 +51,15 @@ Open this website using any modern device that has a web browser.
 #### 3.1\. Functional Requirements <a name="3.1"></a>
 Function | Requirements
 --- | ---
-Reading news | Website should have simple interface with possibility to observe many news with small description in one page. Pushing link/button “read more” to see full information
-Switching to admin mode | Website should have a part responsible for singing in admin profile. Text fields for login and password and button “sign in”.
-Adding news | Website should have text area to write new pages with tools for editing text. Button “save draft” to continue editing later, “publish” to push this news on main page.
-Deleting news | Website should have button “delete” to remove news from website
-Searching |  Website should have text field and button “find” to find any web page
+Reading news | Website shall have simple interface with possibility to observe many news with small description in one page. Pushing link/button “read more” to see full information
+Switching to admin mode | Website shall have a part responsible for singing in admin profile. Text fields for login and password and button “sign in”.
+Adding news | Website shall have text area to write new pages with tools for editing text. Button “save draft” to continue editing later, “publish” to push this news on main page.
+Deleting news | Website shall have button “delete” to remove news from website
+Searching |  Website shall have text field and button “find” to find any web page
 
 #### 3.2\. Non-Functional Requierements <a name="3.2"></a>
 ##### 3.2.1\. Software Quality Attributes <a name="3.2.1"></a>
 ##### 3.2.1.1 External Quality Criteria <a name="3.2.1.1"></a>
-That should work fast in every device that is popular now (nobody wants to use low-speed resources). Furthermore, that is important to make simple interface and beautiful design due to users like to use good-looking pages. As result it should be more popular.
+That shall work fast in every device that is popular now (nobody wants to use low-speed resources). Furthermore, that is important to make simple interface and beautiful design due to users like to use good-looking pages. As result it will be more popular.
 ### 4\. Analogues <a name="4"></a>
 There is some analogues. User can make simple sites using [Blogspot](https://www.blogger.com/) and [Wix](https://wix.com/). The main disadvantage of that site is that sites have excess of functionality. Our project simplifies the process of editing news. 
