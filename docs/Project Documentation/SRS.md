@@ -24,7 +24,7 @@ This app uses Spring framework for web application and relational database for s
 #### 2.2\. User Interfaces <a name="2.2"></a>
 This app uses Spring framework for web application and SQL database for storing data.
 There are mocaps of [main page](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/main-page.png) and [news editing](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/news-editing.png).
-Interface should be simple for regular user who just read this site. Description of what it can do is down below.
+Interface should be simple for regular user who just read this site. Description of what it should do is down below.
 
 Button | Event
 --- | ---
