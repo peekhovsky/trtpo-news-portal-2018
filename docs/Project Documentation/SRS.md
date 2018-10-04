@@ -22,15 +22,22 @@ That is what we are going to make in this project.
 #### 2.1\. Software Interfaces <a name="2.1"></a>
 This app uses Spring framework for web application and relational database for storing data.
 #### 2.2\. User Interfaces <a name="2.2"></a>
-This app uses Spring framework for web application and SQL database for storing data.
 There are mocups of [main page](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/main-page.png) and [news editing](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/news-editing.png).
-Interface should be simple for regular user who just read this site. Description of what every button should do is down below.
+Interface should be simple for both regular user (who just read this site) and admin (who update infromation). Description of what every button should do is down below.
+
+For regular user:
 
 Button | Event
 --- | ---
 "Find" | Finds news depending on your text in the text field
 "Read more" | Opens page to see full text
-"Sign in" | Goes to moderator version depending on login and password
+"Share" | Shares this news in any social network
+
+For admin mode: 
+
+Button | Event
+--- | ---
+"Sign in" | Goes to admin version depending on admin's login and password 
 "Save as draft " | Saves everything that you have made as draft without publishing 
 "Publish" | Publishes your text
 "Sign out" | Goes to plain version of site
@@ -43,23 +50,32 @@ Target Users:
 * Any companies that need plain website for event temporarily
 
 #### 2.4\. Assumptions and Dependencies <a name="2.4"></a>
-This project does not include mobile version of website. If you open it in mobile device, there will be usual desktop version.
+This project does not include mobile version of website. If you open it in mobile device, there will be usual desktop version. 
 
 ### 3\. System Requirements <a name="3"></a>
-Open this website using any modern device that has a web browser. 
 
 #### 3.1\. Functional Requirements <a name="3.1"></a>
+
+For plain user:
+
 Function | Requirements
 --- | ---
-Reading news | Website shall have simple interface with possibility to observe many news with small description in one page. Pushing link/button “read more” to see full information
-Switching to admin mode | Website shall have a part responsible for singing in admin profile. Text fields for login and password and button “sign in”.
-Adding news | Website shall have text area to write new pages with tools for editing text. Button “save draft” to continue editing later, “publish” to push this news on main page.
-Deleting news | Website shall have button “delete” to remove news from website
-Searching |  Website shall have text field and button “find” to find any web page
+Reading news | The website should have simple interface with possibility to observe many news with small description in one page. Pushing link/button “read more” to see full information
+Searching |   The website should have text field and button “find” to find any web page
+Sharing | The website should have tools to share this news in social networks
+
+For administrator:
+
+Function | Requirements
+--- | ---
+Switching to admin mode |  The website should have a part responsible for singing in admin profile. Text fields for login and password and button “sign in”.
+Adding news |  The website should have text area to write new pages with tools for editing text. Button “save draft” to continue editing later, “publish” to push this news on main page.
+Deleting news |  The website should have button “delete” to remove news from website
+Adding new administrator | The website should have tools for adding new users responsible for updating. Once an admin added new users, he should set an access level for them.  
+
 
 #### 3.2\. Non-Functional Requierements <a name="3.2"></a>
 ##### 3.2.1\. Software Quality Attributes <a name="3.2.1"></a>
-##### 3.2.1.1 External Quality Criteria <a name="3.2.1.1"></a>
-That shall work fast in every device that is popular now (nobody wants to use low-speed resources). Furthermore, that is important to make simple interface and beautiful design due to users like to use good-looking pages. As result it will be more popular.
+
 ### 4\. Analogues <a name="4"></a>
-There is some analogues. User can make simple sites using [Blogspot](https://www.blogger.com/) and [Wix](https://wix.com/). The main disadvantage of that site is that sites have excess of functionality. Our project simplifies the process of editing news. 
+There is some analogues. User can make simple sites using [Blogspot](https://www.blogger.com/) and [Wix](https://wix.com/). The main disadvantage of that site is that sites have an excess of functionality. Our project simplifies the process of editing news. 
