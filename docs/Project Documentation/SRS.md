@@ -20,7 +20,7 @@ That is what we are going to make in this project.
 
 ### 2\. User Requirements <a name="2"></a>
 #### 2.1\. Software Interfaces <a name="2.1"></a>
-This app uses Spring framework for web application and relational database for storing data.
+This app uses relational database for storing data and does not interract with any external systems and libraries.
 #### 2.2\. User Interfaces <a name="2.2"></a>
 There are mocups of [main page](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/main-page.png) and [news editing](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/news-editing.png).
 Interface should be simple for both regular user (who just read this site) and admin (who update infromation). Description of what every button should do is down below.
@@ -76,6 +76,7 @@ Adding new administrator | The website should have tools for adding new users re
 
 #### 3.2\. Non-Functional Requierements <a name="3.2"></a>
 ##### 3.2.1\. Software Quality Attributes <a name="3.2.1"></a>
+Project must be simple to use (a copule of big buttons and text fields on all pages), and light-weight (should have good performance on non-powerful devices, and should load fast even if user have low-speed connection). Aslo, that is vitally important to have safe security system (it might be hacked by trespassers when it becomes popular).  
 
 ### 4\. Analogues <a name="4"></a>
 There is some analogues. User can make simple sites using [Blogspot](https://www.blogger.com/) and [Wix](https://wix.com/). The main disadvantage of that site is that sites have an excess of functionality. Our project simplifies the process of editing news. 
