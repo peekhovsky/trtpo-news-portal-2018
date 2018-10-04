@@ -54,7 +54,7 @@ This project does not include mobile version of website. If you open it in mobil
 
 #### 3.1\. Functional Requirements <a name="3.1"></a>
 
-For plain user:
+For usual user:
 
 Function | Requirements
 --- | ---
