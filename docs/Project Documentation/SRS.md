@@ -76,7 +76,7 @@ Adding new administrator | The website should have tools for adding new users re
 
 #### 3.2\. Non-Functional Requierements <a name="3.2"></a>
 ##### 3.2.1\. Software Quality Attributes <a name="3.2.1"></a>
-Project must be simple to use (a copule of big buttons and text fields on all pages), and light-weight (should have good performance on non-powerful devices, and should load fast even if user have low-speed connection). Aslo, that is vitally important to have safe security system (it might be hacked by trespassers when it becomes popular).  
+Project must be simple to use (a copule of big buttons and text fields on all pages), and light-weight (should not have lags on non-powerful devices, and should load fast even if user have low-speed connection). Aslo, that is vitally important to have safe security system (it might be hacked by trespassers when it becomes popular).  
 
 ### 4\. Analogues <a name="4"></a>
 There is some analogues. User can make simple sites using [Blogspot](https://www.blogger.com/) and [Wix](https://wix.com/). The main disadvantage of that site is that sites have an excess of functionality. Our project simplifies the process of editing news. 
