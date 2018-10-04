@@ -20,7 +20,7 @@ That is what we are going to make in this project.
 
 ### 2\. User Requirements <a name="2"></a>
 #### 2.1\. Software Interfaces <a name="2.1"></a>
-This app uses relational database for storing data and does not interract with any external systems and libraries.
+This app uses relational database for storing data and does not interract with external systems and libraries.
 #### 2.2\. User Interfaces <a name="2.2"></a>
 There are mocups of [main page](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/main-page.png) and [news editing](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/Mockups/news-editing.png).
 Interface should be simple for both regular user (who just read this site) and admin (who update infromation). Description of what every button should do is down below.
