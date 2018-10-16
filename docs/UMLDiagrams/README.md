@@ -32,18 +32,23 @@ User can share a page in social networks using "Share" button below the page.
 ![Sharing](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/Sharing.JPG)
 #### 1.4 Signing<a name="1.4"></a>
 Administrator can sign in using "login" and "password" fields. App will validate data, and if the result is successful, it will turn to admin mode.
+
 ![Signing in](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/SingingIn.JPG)
 #### 1.5 Adding new news<a name="1.5"></a>
 Administrator can add new news using "Add" button. App will open text editor. Administrator can save this text as draft (to continue editing later) or publish it.
+
 ![Adding new news](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/AddNewNews.JPG)
 #### 1.6 Watching drafts<a name="1.6"></a>
 Administrator can watch and edit drafts. App will open text editor. Administrator can save this text as draft (to continue editing later) or publish it.
+
 ![Watching drafts](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/WatchDrafts.JPG)
 #### 1.7 Deleting<a name="1.7"></a>
 Administrator can delete news (and drafts) using "Delete" button. App will detete selected news.
+
 ![Deleting](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/Deleting.JPG)
 #### 1.8 Loging out<a name="1.8"></a>
 If administrator pushes "Log out" button, app will return back to plain user mode.
+
 ![Loging out](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/LogOut.JPG)
 ### 6. Use case diagram<a name="6"></a>
 Use case diagram is below:
