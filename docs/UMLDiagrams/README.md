@@ -23,9 +23,11 @@
 ### 1. Activity diagram<a name="1"></a>
 #### 1.1 Reading more<a name="1.1"></a>
 If user pushes "Read more" button near news description, app will show news page with full information. 
+
 ![Reading more](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/ReadMore.JPG)
 #### 1.2 Finding<a name="1.2"></a>
 If user fill text field and pushes "Find" button, app will find proper news. If there is no appropriate news, it will show "Cannot found" message.
+
 ![Finding](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/UMLDiagrams/Activity/Finding.JPG)
 #### 1.3 Sharing<a name="1.3"></a>
 User can share a page in social networks using "Share" button below the page.
