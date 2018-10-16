@@ -47,11 +47,11 @@ Admin | Adds, edits, deletes news, saves drafts
 ##### 6.2.1 Watch news<a name="6.2.1"></a>
 **Desctription:** Allows user to browse page with news list and open full page with news.
 Execution thread:
-1. User opens main page
-2. App shows news list with short description
-3. User push "Read more" button in particular news
-4. App shows a page with full information
-5. End
+1. User opens main page.
+2. App shows news list with short description.
+3. User push "Read more" button in particular news.
+4. App shows a page with full information.
+5. End.
 ##### 6.2.2 Signing In<a name="6.2.1"></a>
 **Desctription:** Allows administrator to enable admin mode on the site.
 Execution thread:
@@ -65,13 +65,18 @@ Execution thread:
 1. Admin pushs button "Add new" to add new news.
 2. App opens page with text editor.
 3. Admin edits text and publish or saves in drafts (go to p. 5) this text.
-4. App pusblishes this text as news (go to p. 6)
-5. App saves this text as draft
-6. End
+4. App pusblishes this text as news (go to p. 6).
+5. App saves this text as draft.
+6. End.
 ##### 6.2.4 Delete news<a name="6.2.1"></a>
 **Desctription:** Allows administrtor to delete news
 Execution thread:
 1. Admin pushs button "Delete" in particular news.
 2. App deletes this news from main page.
-6. End
-
+6. End.
+##### 6.2.5 Log out<a name="6.2.1"></a>
+**Desctription:** Allows administrtor to return back to plain mode.
+Execution thread:
+1. Admin pushs button "Log out".
+2. App returns to plain mode.
+6. End.
