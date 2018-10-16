@@ -25,14 +25,14 @@
 #### 1.2 Finding<a name="1.2"></a>
 ![Finding](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/UMLDiagrams/Activity/Finding.JPG)
 #### 1.3 Sharing<a name="1.3"></a>
-[!Sharing](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/Sharing.JPG)
+![Sharing](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/Sharing.JPG)
 #### 1.4 Signing In<a name="1.4"></a>
 ![Signing in](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/SingingIn.JPG)
 #### 1.5 Adding new news<a name="1.5"></a>
 ![Adding new news](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/AddNewNews.JPG)
 #### 1.6 Watching drafts<a name="1.6"></a>
-[!Watching drafts](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/WatchDrafts.JPG)
+![Watching drafts](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/WatchDrafts.JPG)
 #### 1.7 Deleting<a name="1.7"></a>
-[!Deleting](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/Deleting.JPG)
+![Deleting](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/Deleting.JPG)
 #### 1.8 Loging out<a name="1.8"></a>
-[!Loging out](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/LogOut.JPG)
+![Loging out](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/LogOut.JPG)
