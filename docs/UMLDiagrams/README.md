@@ -1,4 +1,4 @@
-# UML Диаграммы
+# UML Diagrams
 1. [Activity diagram](#1)<br>
 1.1 [Reading more](#1.1)<br>
 1.2 [Finding](#1.2)<br>
@@ -36,3 +36,5 @@
 ![Deleting](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/Deleting.JPG)
 #### 1.8 Loging out<a name="1.8"></a>
 ![Loging out](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/LogOut.JPG)
+### 6. Use case diagram<a name="1"></a>
+![Use case](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/UseCase/UseCase.jpg)
