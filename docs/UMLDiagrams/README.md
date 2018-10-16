@@ -15,8 +15,8 @@
 6. [Use case diagram](#6)<br>
 6.1 [Actors](#6.1)<br>
 6.2 [Use cases](#6.2)<br>
-6.2.1 [Watch news]
-6.2.2.[Signing in]
+6.2.1 [Watch news](#6.2.1)<br>
+6.2.2.[Signing in](#6.2.2)<br>
 ### 1. Activity diagram<a name="1"></a>
 #### 1.1 Reading more<a name="1.1"></a>
 ![Reading more](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/ReadMore.JPG)
@@ -67,5 +67,11 @@ Execution thread:
 3. Admin edits text and publish or saves in drafts (go to p. 5) this text.
 4. App pusblishes this text as news (go to p. 6)
 5. App saves this text as draft
+6. End
+##### 6.2.4 Delete news<a name="6.2.1"></a>
+**Desctription:** Allows administrtor to delete news
+Execution thread:
+1. Admin pushs button "Delete" in particular news.
+2. App deletes this news from main page.
 6. End
 
