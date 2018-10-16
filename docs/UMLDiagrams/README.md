@@ -11,4 +11,5 @@
 6.2.2 [bbb](#6.2.2)<br>
 6.2.3 [ccc](#6.2.3)<br>
 
-
+### 1. Activity diagram<a name="1"></a>
+![Adding new news](trtpo-news-portal-2018/docs/UMLDiagrams/Activity/AddNewNews.JPG)
