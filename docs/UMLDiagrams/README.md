@@ -15,9 +15,6 @@
 6. [Use case diagram](#6)<br>
 6.1 [Actors](#6.1)<br>
 6.2 [Use cases](#6.2)<br>
-6.2.1 [aaa](#6.2.1)<br>
-6.2.2 [bbb](#6.2.2)<br>
-6.2.3 [ccc](#6.2.3)<br>
 
 ### 1. Activity diagram<a name="1"></a>
 #### 1.1 Reading more<a name="1.1"></a>
@@ -37,4 +34,10 @@
 #### 1.8 Loging out<a name="1.8"></a>
 ![Loging out](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/LogOut.JPG)
 ### 6. Use case diagram<a name="1"></a>
+Use case diagram is below:
 ![Use case](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/UseCase/UseCase.jpg)
+#### 6.1 Actors
+Actor | Description
+--- | ---
+User | Browses page news list, reads full news pages
+Admin | Adds, edits, deletes news, saves drafts 
