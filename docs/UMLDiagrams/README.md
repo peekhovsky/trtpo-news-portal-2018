@@ -15,7 +15,7 @@
 6. [Use case diagram](#6)<br>
 6.1 [Actors](#6.1)<br>
 6.2 [Use cases](#6.2)<br>
-
+6.2.1 [Watch news]
 ### 1. Activity diagram<a name="1"></a>
 #### 1.1 Reading more<a name="1.1"></a>
 ![Reading more](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/ReadMore.JPG)
@@ -33,11 +33,24 @@
 ![Deleting](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/Deleting.JPG)
 #### 1.8 Loging out<a name="1.8"></a>
 ![Loging out](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/LogOut.JPG)
-### 6. Use case diagram<a name="1"></a>
+### 6. Use case diagram<a name="6"></a>
 Use case diagram is below:
 ![Use case](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/UseCase/UseCase.jpg)
-#### 6.1 Actors
+#### 6.1 Actors<a name="6.1"></a>
 Actor | Description
 --- | ---
 User | Browses page news list, reads full news pages
 Admin | Adds, edits, deletes news, saves drafts 
+
+#### 6.2 Use cases<a name="6.2"></a>
+##### 6.2.1 Watch news<a name="6.2.1"></a>
+**Desctription:** Allows user to browse page with news list and open full page with news.
+Execution thread:
+1. User opens main page
+2. App shows news list with short description
+3. User push "Read more" button in particular news
+4. App shows a page with full information
+5. End
+
+
+
