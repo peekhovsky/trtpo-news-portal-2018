@@ -1,5 +1,5 @@
 # UML Диаграммы
-1. [Activity diagram](#1)
+1. [Activity diagram](#1)<br>
 1.1 [Reading more](#1.1)<br>
 1.2 [Finding](#1.2)<br>
 1.3 [Sharing](#1.3)<br>
@@ -25,7 +25,7 @@
 #### 1.2 Finding<a name="1.2"></a>
 ![Finding](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/UMLDiagrams/Activity/Finding.JPG)
 #### 1.3 Sharing<a name="1.3"></a>
-[!Sharing](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/UMLDiagrams/Activity/Finding.JPG)
+[!Sharing](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/Sharing.JPG)
 #### 1.4 Signing In<a name="1.4"></a>
 ![Signing in](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/SingingIn.JPG)
 #### 1.5 Adding new news<a name="1.5"></a>
