@@ -51,6 +51,15 @@ Administrator can delete news (and drafts) using "Delete" button. App will detet
 #### 1.8 Loging out<a name="1.8"></a>
 If administrator pushes "Log out" button, app will return back to plain user mode.
 
+### 2. Class diagram<a name="2"></a>
+
+### 3. Sequence diagram<a name="3"></a>
+![Sequence diagram](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Sequence/Sequence.jpg)
+
+### 4. Statechart diagram<a name="4"></a>
+
+### 5. Deployment diagram<a name="5"></a>
+
 ![Loging out](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/LogOut.JPG)
 ### 6. Use case diagram<a name="6"></a>
 Use case diagram is below:
