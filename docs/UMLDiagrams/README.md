@@ -37,7 +37,7 @@ Administrator can sign in using "login" and "password" fields. App will validate
 
 ![Signing in](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/SingingIn.JPG)
 #### 1.5 Adding new news<a name="1.5"></a>
-Administrator can add new news using "Add" button. App will open text editor. Administrator can save this text as draft (to continue editing later) or publish it.
+Administrator can add new news using "Add" button. App will open a text editor. Administrator can save this text as draft (to continue editing later) or publish it.
 
 ![Adding new news](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/AddNewNews.JPG)
 #### 1.6 Watching drafts<a name="1.6"></a>
