@@ -53,9 +53,19 @@ Execution thread:
 4. App shows a page with full information
 5. End
 ##### 6.2.2 Signing In<a name="6.2.1"></a>
-**Desctription:** Allows administrator to change information on the site.
+**Desctription:** Allows administrator to enable admin mode on the site.
 Execution thread:
 1. Administrator fill fields with login and password data. 
 2. App validates this data. If it is incorrect go to p. 4.
 3. App sets admin mode (allows to change information).
 4. End
+##### 6.2.3 Add and edit news<a name="6.2.1"></a>
+**Desctription:** Allows administrtor to add and change news on the site.
+Execution thread:
+1. Admin pushs button "Add new" to add new news.
+2. App opens page with text editor.
+3. Admin edits text and publish or saves in drafts (go to p. 5) this text.
+4. App pusblishes this text as news (go to p. 6)
+5. App saves this text as draft
+6. End
+
