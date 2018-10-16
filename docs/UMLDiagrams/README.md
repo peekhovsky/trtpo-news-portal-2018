@@ -12,4 +12,4 @@
 6.2.3 [ccc](#6.2.3)<br>
 
 ### 1. Activity diagram<a name="1"></a>
-![Adding new news](trtpo-news-portal-2018/docs/UMLDiagrams/Activity/AddNewNews.JPG)
+![Adding new news](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/AddNewNews.JPG)
