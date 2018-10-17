@@ -57,7 +57,6 @@ If administrator pushes "Log out" button, app will return back to plain user mod
 
 ### 3. Sequence diagram<a name="3"></a>
 ![Sequence diagram](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Sequence/Sequence.jpg)
-(will update soon)
 ### 4. Statechart diagram<a name="4"></a>
 (will update soon)
 
