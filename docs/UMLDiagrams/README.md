@@ -79,7 +79,7 @@ Admin | Adds, edits, deletes news, saves drafts
 Execution thread:
 1. User opens main page.
 2. App shows news list with short description.
-3. User push "Read more" button in particular news.
+3. User pushes "Read more" button in particular news.
 4. App shows a page with full information.
 5. End.
 ##### 6.2.2 Signing In<a name="6.2.2"></a>
@@ -92,7 +92,7 @@ Execution thread:
 ##### 6.2.3 Add and edit news<a name="6.2.3"></a>
 **Desctription:** Allows administrtor to add and change news on the site.
 Execution thread:
-1. Admin pushs button "Add new" to add new news.
+1. Admin pushes button "Add new" to add new news.
 2. App opens page with text editor (user can choose a template from drafts).
 3. Admin edits text and publish or saves in drafts (go to p. 5) this text.
 4. App pusblishes this text as news (go to p. 6).
@@ -101,12 +101,12 @@ Execution thread:
 ##### 6.2.4 Delete news<a name="6.2.4"></a>
 **Desctription:** Allows administrtor to delete news
 Execution thread:
-1. Admin pushs button "Delete" in particular news.
+1. Admin pushes button "Delete" in particular news.
 2. App deletes this news from main page.
 6. End.
 ##### 6.2.5 Log out<a name="6.2.5"></a>
 **Desctription:** Allows administrtor to return back to plain mode.
 Execution thread:
-1. Admin pushs button "Log out".
+1. Admin pushes button "Log out".
 2. App returns to plain mode.
 6. End.
