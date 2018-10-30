@@ -53,7 +53,7 @@ If administrator pushes "Log out" button, app will return back to plain user mod
 
 ![Loging out](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Activity/LogOut.JPG)
 ### 2. Class diagram<a name="2"></a>
-(will update soon)
+![Class diagram](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/UMLClass.PNG)
 
 ### 3. Sequence diagram<a name="3"></a>
 ![Sequence diagram](https://raw.githubusercontent.com/peekhovsky/trtpo-news-portal-2018/master/docs/UMLDiagrams/Sequence/Sequence.jpg)
