@@ -44,7 +44,4 @@ public class User {
      */
     @Enumerated(value = EnumType.STRING)
     private UserState userState;
-
-    @ManyToOne
-    private List<News> news;
 }

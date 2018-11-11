@@ -1,10 +1,12 @@
 package by.peekhovsky.newsportal.models.news;
 
-
 import by.peekhovsky.newsportal.models.users.User;
 import lombok.*;
+import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -20,15 +22,17 @@ import java.time.LocalDate;
 @ToString(exclude = "text")
 public class News {
     @Id
+    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
 
     private String text;
-
+    @Convert(converter = Jsr310JpaConverters.LocalDateConverter.class)
     private LocalDate date;
 
-    @OneToOne
-    private User user;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "author")
+    private User author;
 }

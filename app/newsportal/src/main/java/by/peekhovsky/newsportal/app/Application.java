@@ -16,7 +16,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @ComponentScan(basePackages = "by.peekhovsky.newsportal")
 @EnableJpaRepositories(basePackages = "by.peekhovsky.newsportal.repositories")
-@EntityScan(basePackages = "by.peekhovsky.models")
+@EntityScan(basePackages = "by.peekhovsky.newsportal.models")
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class);
