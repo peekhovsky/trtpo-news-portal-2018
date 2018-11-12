@@ -8,6 +8,8 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 /**
  * @author Rostislav Pekhovsky 2018
@@ -35,8 +37,8 @@ public class News {
     @Column
     private String text;
 
-    @Convert(converter = Jsr310JpaConverters.LocalDateConverter.class)
-    private LocalDate date;
+    @Convert(converter = Jsr310JpaConverters.LocalDateTimeConverter.class)
+    private LocalDateTime dateTime;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")

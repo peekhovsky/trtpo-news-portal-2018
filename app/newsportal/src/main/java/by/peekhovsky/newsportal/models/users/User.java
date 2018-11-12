@@ -1,13 +1,11 @@
 package by.peekhovsky.newsportal.models.users;
 
-import by.peekhovsky.newsportal.models.news.News;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @NoArgsConstructor

@@ -11,8 +11,10 @@
         Author: ${news.author.firstName} ${news.author.lastName}
     </h5>
     <h5>
-        Date: ${news.date}
+        <#assign aDateTime = news.dateTime>
+        Date: ${aDateTime}
     </h5>
+
 </div>
 </body>
 </html>
