@@ -8,8 +8,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,6 +26,11 @@ public class NewsServiceImpl implements NewsService {
        Pageable pageable = new PageRequest((int) pageNumber, 10);
        Page<News> page = newsRepository.findAll(pageable);
        return page.getContent();
+    }
+
+    @Override
+    public void save(News news) {
+        newsRepository.save(news);
     }
 
     @Override

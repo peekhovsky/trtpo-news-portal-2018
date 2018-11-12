@@ -5,7 +5,7 @@
 </head>
 <body>
 <div>
-    Error 404: Page is not found.
+    <h2>Error 404: Page is not found.<h2/>
 </div>
 </body>
 </html>

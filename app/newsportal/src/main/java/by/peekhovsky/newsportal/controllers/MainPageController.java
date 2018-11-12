@@ -1,19 +1,24 @@
 package by.peekhovsky.newsportal.controllers;
 
 import by.peekhovsky.newsportal.models.news.News;
+import by.peekhovsky.newsportal.security.details.UserDetailsImpl;
+import by.peekhovsky.newsportal.transfer.UserDto;
 import by.peekhovsky.newsportal.users.NewsService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Optional;
+
+import static by.peekhovsky.newsportal.transfer.UserDto.from;
 
 @Controller
 public class MainPageController {
@@ -30,11 +35,20 @@ public class MainPageController {
         this.newsService = newsService;
     }
 
-
+    @ModelAttribute
+    public void checkAuthentication(Authentication authentication, ModelMap model) {
+        if (authentication != null) {
+            UserDetailsImpl details
+                    = (UserDetailsImpl) authentication.getPrincipal();
+            UserDto userDto = from(details.getUser());
+            model.addAttribute("userDto", userDto);
+        }
+    }
 
     @GetMapping("/{page-num}")
     public String getMainPage(ModelMap model,
                               @PathVariable(value = "page-num") long pageNumber) {
+
         List<News> news = newsService.findAllByPage(pageNumber);
         LOGGER.debug("Get main page, news: " + news);
         model.addAttribute("newsFromServer", news);
@@ -51,7 +65,7 @@ public class MainPageController {
 
     @GetMapping("/news/{news-id}")
     public String getNews(ModelMap model,
-                              @PathVariable(value = "news-id") long newsId) {
+                          @PathVariable(value = "news-id") long newsId) {
         Optional<News> optionalNews = newsService.findById(newsId);
         if (optionalNews.isPresent()) {
             model.addAttribute("news", optionalNews.get());
@@ -60,10 +74,5 @@ public class MainPageController {
             return "error404";
         }
 
-    }
-
-    @PostMapping("/")
-    public String signIn() {
-        return "main";
     }
 }

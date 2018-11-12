@@ -8,4 +8,5 @@ import java.util.Optional;
 public interface NewsService {
     Optional<News> findById(Long id);
     List<News> findAllByPage(long pageNumber);
+    void save(News news);
 }
