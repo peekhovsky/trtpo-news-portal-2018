@@ -26,13 +26,19 @@ public class News {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column
     private String title;
 
+    @Column
+    private String description;
+
+    @Column
     private String text;
+
     @Convert(converter = Jsr310JpaConverters.LocalDateConverter.class)
     private LocalDate date;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "author")
+    @JoinColumn(name = "author_id")
     private User author;
 }

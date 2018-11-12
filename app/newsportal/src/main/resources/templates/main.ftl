@@ -7,10 +7,10 @@
 <div>
     <#list newsFromServer as news>
         <h3>${news.title}</h3>
-        <br/>
-        ${news.text}
+        ${news.description}
         <br/>
         Date: ${news.date}
+        Author: ${news.author.firstName} ${news.author.lastName}
         <br/>
     </#list>
 </div>
