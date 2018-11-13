@@ -1,7 +1,7 @@
 <#ftl encoding='UTF-8'>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-    <title>Main page</title>
+    <title>News portal</title>
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 <body>
@@ -14,11 +14,12 @@
             <#if userDto??>
                 Signed as:<br/>
                 Login: ${userDto.login} <br/>
-                Name: ${userDto.firstName} ${userDto.lastName}
-                <br/><br/>
-                <form method="get" action="/add"><input type="submit" value="Add news">
+                Name: ${userDto.firstName} ${userDto.lastName} <br/>
+                <form method="get" action="/add">
+                    <input type="submit" value="Add news">
                 </form>
-                <form method="get" action="/logout"><input type="submit" value="Sign out">
+                <form method="get" action="/logout">
+                    <input type="submit" value="Sign out">
                 </form>
             <#else>
             <form method="post" action="/login">

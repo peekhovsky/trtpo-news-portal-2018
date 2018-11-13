@@ -1,4 +1,4 @@
-package by.peekhovsky.newsportal.users;
+package by.peekhovsky.newsportal.services;
 
 import by.peekhovsky.newsportal.repositories.UsersRepository;
 import by.peekhovsky.newsportal.security.details.UserDetailsImpl;

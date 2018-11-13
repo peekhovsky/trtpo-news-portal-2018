@@ -1,9 +1,11 @@
 package by.peekhovsky.newsportal.controllers;
 
 import by.peekhovsky.newsportal.models.news.News;
+import by.peekhovsky.newsportal.models.news.NewsForm;
+import by.peekhovsky.newsportal.models.users.User;
 import by.peekhovsky.newsportal.security.details.UserDetailsImpl;
 import by.peekhovsky.newsportal.transfer.UserDto;
-import by.peekhovsky.newsportal.users.NewsService;
+import by.peekhovsky.newsportal.services.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,8 @@ public class AddNewsController {
 
     private final NewsService newsService;
 
+    private UserDto userDto;
+
     @Autowired
     public AddNewsController(NewsService newsService) {
         this.newsService = newsService;
@@ -30,7 +34,7 @@ public class AddNewsController {
         if (authentication != null) {
             UserDetailsImpl details
                     = (UserDetailsImpl) authentication.getPrincipal();
-            UserDto userDto = from(details.getUser());
+            userDto = from(details.getUser());
             model.addAttribute("userDto", userDto);
         }
     }
@@ -41,8 +45,9 @@ public class AddNewsController {
     }
 
     @PostMapping("/add")
-    void addNews(@RequestBody News newNews) {
-        newsService
+    public String addNews(NewsForm newsForm) {
+        newsService.save(newsForm, userDto);
+        return "redirect:/";
     }
 
 }

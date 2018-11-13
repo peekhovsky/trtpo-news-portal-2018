@@ -24,7 +24,6 @@ import java.time.LocalTime;
 @ToString(exclude = "text")
 public class News {
     @Id
-    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

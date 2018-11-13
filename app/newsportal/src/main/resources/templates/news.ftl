@@ -62,7 +62,7 @@ ${news.text}
         <#assign aDateTime = news.dateTime>
         Date: ${aDateTime}
     </h5>
-
 </div>
+<a href="#" onClick="history.go(-1)">Go Back</a>
 </body>
 </html>

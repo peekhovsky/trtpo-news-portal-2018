@@ -3,7 +3,7 @@ package by.peekhovsky.newsportal.controllers;
 import by.peekhovsky.newsportal.models.news.News;
 import by.peekhovsky.newsportal.security.details.UserDetailsImpl;
 import by.peekhovsky.newsportal.transfer.UserDto;
-import by.peekhovsky.newsportal.users.NewsService;
+import by.peekhovsky.newsportal.services.NewsService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -36,7 +36,8 @@ public class MainPageController {
     }
 
     @ModelAttribute
-    public void checkAuthentication(Authentication authentication, ModelMap model) {
+    public void checkAuthentication(Authentication authentication,
+                                    ModelMap model) {
         if (authentication != null) {
             UserDetailsImpl details
                     = (UserDetailsImpl) authentication.getPrincipal();
@@ -71,8 +72,8 @@ public class MainPageController {
             model.addAttribute("news", optionalNews.get());
             return "news";
         } else {
-            return "error404";
+            model.addAttribute("message", "404: Not found");
+            return "error";
         }
-
     }
 }
