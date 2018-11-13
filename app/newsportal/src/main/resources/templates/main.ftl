@@ -2,15 +2,16 @@
 <html>
 <head>
     <title>News portal</title>
+    <link rel="stylesheet" href="/css/default.css" type="text/css" media="screen">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 <body>
-<table align="center">
-    <tr>
-        <td>
+<div class="top">
+    <div class="header">
+        <div class="left">
             <h1>News portal</h1>
-        </td>
-        <td>
+        </div>
+        <div class="right">
             <#if userDto??>
                 Signed as:<br/>
                 Login: ${userDto.login} <br/>
@@ -24,6 +25,11 @@
             <#else>
             <form method="post" action="/login">
                 <table>
+                    <tr>
+                    <#if auth_fail??>
+                        <td>Incorrect login or password.</td>
+                    </#if>
+                    </tr>
                     <tr>
                         <td>
                             <label for="login">
@@ -48,21 +54,46 @@
                 </table>
             </form>
             </#if>
-        </td>
-    </tr>
-</table>
-<div>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="container">
+    <div class="navigation">
+        <a href="#">Vestibulum</a>
+        <a href="#">Suspendisse</a>
+        <a href="#">Elemen</a>
+        <a href="#">Maecenas</a>
+        <a href="#">Sodales</a>
+        <div class="clearer"><span></span></div>
+    </div>
+    <div class="main">
+    <div class="content">
     <#list newsFromServer as news>
-        <h3>${news.title}</h3>
-        ${news.description}
-        <br/><br/>
-        <form action="/news/${news.id}/">
-            <input type="submit" value="Read more"/>
-        </form>
-        Date: ${news.dateTime}
-        Author: ${news.author.firstName} ${news.author.lastName}
-        <br/><br/><br/>
+
+            <h1>${news.title}</h1>
+            ${news.description}
+            <br/><br/>
+            <form action="/news/${news.id}/">
+                <input type="submit" value="Read more"/>
+            </form>
+            <div class="descr">Date: ${news.dateTime}
+                Author: ${news.author.firstName} ${news.author.lastName}
+            </div>
+            <br/><br/><br/>
     </#list>
+    </div>
+        <div class="sidenav">
+            <ul>
+            <#if nextPageNumber??>
+                <li><a href="/${nextPageNumber}">Next page</a></li>
+            </#if>
+            <#if previousPageNumber??>
+                <li><a href="/${previousPageNumber}">Previous page</a></li>
+            </#if>
+            </ul>
+        </div>
+    </div>
 </div>
 </body>
 </html>

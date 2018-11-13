@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
@@ -12,9 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class NewsErrorController implements ErrorController {
 
-    @RequestMapping("/auth_failure")
-    public String handleErrorFailure() {
-        return "/";
+    @RequestMapping("/auth_fail")
+    public String handleErrorFailure(RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("auth_fail", true);
+        return "redirect:/";
     }
 
 
@@ -34,6 +36,7 @@ public class NewsErrorController implements ErrorController {
                 return "error";
             }
             else if (statusCode == HttpStatus.BAD_REQUEST.value()) {
+                model.addAttribute("message", "400: Bad request error.");
                 return "error";
             }
         }

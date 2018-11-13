@@ -53,14 +53,19 @@ public class MainPageController {
         List<News> news = newsService.findAllByPage(pageNumber);
         LOGGER.debug("Get main page, news: " + news);
         model.addAttribute("newsFromServer", news);
+        if (pageNumber > 0) {
+            model.addAttribute("previousPageNumber", pageNumber - 1);
+        }
+        model.addAttribute("nextPageNumber", pageNumber + 1);
         return "main";
     }
+
     @GetMapping("/")
     public String getMainPage(ModelMap model) {
-
         List<News> news = newsService.findAllByPage(DEFAULT_PAGE_NUMBER);
         LOGGER.debug("Get main page, news: " + news);
         model.addAttribute("newsFromServer", news);
+        model.addAttribute("nextPageNumber", 1);
         return "main";
     }
 
