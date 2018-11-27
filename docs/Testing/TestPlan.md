@@ -17,16 +17,16 @@ This test plan is intended to test [News portal](https://github.com/peekhovsky/t
 
 ### 2. Quality attributes <a name="2"></a>
 
-## 2.1. Functionality <a name="2.1"></a>
+#### 2.1. Functionality <a name="2.1"></a>
 - app should perform all declared in SRS functions and should do it in right way with no bugs, slowdowns etc.;
 - app should have security system to avoid hacking;
 - app should not have extended functionality that is not declared in SRS (to avoid complexity of use).
 
-## 2.2. Platform support <a name="2.2"></a>
+#### 2.2. Platform support <a name="2.2"></a>
 - app should work in all devices that have bwowser and have access to the Internet;
 - app should be displayed correctly on PC.
 
-## 2.3. Using <a name="2.3"></a>
+#### 2.3. Using <a name="2.3"></a>
 - app should be easy and convenient to use (not much buttons and useless information);
 - app should look simple and attractive to user.
 
