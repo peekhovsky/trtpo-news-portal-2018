@@ -1,4 +1,5 @@
 Script | Action | Expected result | Actual result
+-- | -- | -- | --
 1-1 opening of main page | open main page using link | main page is opened |
 1-2 correctly displayed data after loading (all web-items is it their places
 2-1 opening of any page user wants using page buttons.
