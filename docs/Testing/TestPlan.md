@@ -52,6 +52,6 @@ There is main testing phases to test this application:
 
 <a name="6"></a>
 ### 6. Results
-Results are located in this file: [Results](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/Testing/TestResults.md)
+Results are located in this file: [results](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/Testing/TestResults.md)
 <a name="7"></a>
 ### 7. Conclusion
