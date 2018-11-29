@@ -14,7 +14,7 @@
   4.1.4.[Authorization](#4.1.4)<br>
   4.1.5.[Loging out](#4.1.5)<br>
   4.1.6.[Adding news](#4.1.6)<br> 
-  4.1.7.[Deleting news](#4.1.7)<br> Deleting news
+  4.1.7.[Deleting news](#4.1.7)<br>
 5. [Test approach]
 6. [Results](#6)<br>
 7. [Сonclusion](#7)<br>
