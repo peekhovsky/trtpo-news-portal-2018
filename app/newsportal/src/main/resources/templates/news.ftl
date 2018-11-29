@@ -1,68 +1,93 @@
 <#ftl encoding='UTF-8'>
 <html>
 <head>
-    <title>${news.title}</title>
+    <title>News portal</title>
+    <link rel="stylesheet" href="/css/default.css" type="text/css" media="screen">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 <body>
-<table align="center">
-    <tr>
-        <td>
-            <h1>News portal</h1>
-        </td>
-        <td>
+<div class="top">
+    <div class="header">
+        <div class="left">
+            <ul>
+                <li>
+                    <h2>News portal</h2>
+                </li>
+                <li>
+                    <form method="get" action="/search">
+                        <#if request??>
+                            <input class="input-field" type="text" id="request" name="request"
+                                   value="${request}" placeholder="Search here...">
+                        <#else>
+                             <input class="input-field" type="text" id="request" name="request"
+                                    placeholder="Search here...">
+                        </#if>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
             <#if userDto??>
-                Signed as:<br/>
-                Login: ${userDto.login} <br/>
-                Name: ${userDto.firstName} ${userDto.lastName} <br/>
-                <form method="get" action="/add">
-                    <input type="submit" value="Add news">
-                </form>
-                <form method="get" action="/logout">
-                    <input type="submit" value="Sign out">
-                </form>
+                <h3>Login: ${userDto.login}</h3>
+                <h3>Name: ${userDto.firstName} ${userDto.lastName}</h3>
             <#else>
             <form method="post" action="/login">
-                <table>
-                    <tr>
-                        <td>
-                            <label for="login">
-                                <input class="input-field" type="text" id="login" name="login"
-                                       placeholder="Login">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="password">
-                                <input class="input-field" type="password" id="password" name="password"
-                                       placeholder="Password">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left">
-                            <input type="submit" value="Sign in">
-                        </td>
-                    </tr>
-                </table>
+                <ul>
+                <#if auth_fail??>
+                    <li>Incorrect login or password.</li>
+                <#else>
+                    <li>Sign in</li>
+                </#if>
+                    <li><label for="login">
+                        <input class="input-field" type="text" id="login" name="login"
+                               placeholder="Login">
+                    </label></li>
+                    <li><label for="password">
+                        <input class="input-field" type="password" id="password" name="password"
+                               placeholder="Password">
+                    </label></li>
+                    <li>
+                        <div class="button"><input type="submit" value="Sign in"></div>
+                    </li>
+                </ul>
             </form>
             </#if>
-        </td>
-    </tr>
-</table>
-<div>
-    <h2>${news.title}</h2>
-${news.text}
-    <br/>
-    <h5>
-        Author: ${news.author.firstName} ${news.author.lastName}
-    </h5>
-    <h5>
-        <#assign aDateTime = news.dateTime>
-        Date: ${aDateTime}
-    </h5>
+        </div>
+    </div>
 </div>
-<a href="#" onClick="history.go(-1)">Go Back</a>
+<br/>
+<div class="container">
+
+<#if userDto??>
+<div class="navigation">
+    <a href="/add_news">Add news</a>
+    <a href="/add_user">Add user</a>
+    <a href="/logout">Sign out</a>
+</div>
+</#if>
+    <div class="main">
+        <div class="content">
+            <div class="news">
+                <h1>${news.title}</h1>
+            ${news.text}
+                <br/><br/>
+                <div class="descr">
+                    <#assign aDateTime = news.dateTime>
+                    Date: ${aDateTime.format(dateFormatter)} <br/>
+                    Author: ${news.author.firstName} ${news.author.lastName}
+                </div>
+                <br/><br/><br/>
+            </div>
+        </div>
+        <div class="sidenav">
+            <ul>
+                <li><a href="#" onClick="history.go(-1)">Go Back</a></li>
+                <#if userDto??>
+                <li><a href="/delete/${news.id}">Delete</a></li>
+                </#if>
+                <li><a href="/">Main page</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

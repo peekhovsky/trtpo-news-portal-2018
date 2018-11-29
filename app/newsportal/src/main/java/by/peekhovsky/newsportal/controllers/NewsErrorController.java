@@ -24,24 +24,31 @@ public class NewsErrorController implements ErrorController {
     public String handleError(HttpServletRequest request, ModelMap model) {
         Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
 
+
         if (status != null) {
             Integer statusCode = Integer.valueOf(status.toString());
 
             if (statusCode == HttpStatus.NOT_FOUND.value()) {
                 model.addAttribute("message", "404: Not found");
                 return "error";
-            }
-            else if (statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
+            } else if (statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
                 model.addAttribute("message", "500: Internal server error.");
                 return "error";
-            }
-            else if (statusCode == HttpStatus.BAD_REQUEST.value()) {
-                model.addAttribute("message", "400: Bad request error.");
+            } else if (statusCode == HttpStatus.BAD_REQUEST.value()) {
+                model.addAttribute("message", "Please, authorize to continue.");
                 return "error";
+            } else if (statusCode == HttpStatus.NOT_ACCEPTABLE.value()) {
+                model.addAttribute("message", "");
+                return "error";
+            } else {
+                model.addAttribute("message", status.toString());
             }
+        } else {
+            model.addAttribute("message", "Undefined error.");
         }
         return "error";
     }
+
     @Override
     public String getErrorPath() {
         return "/error";

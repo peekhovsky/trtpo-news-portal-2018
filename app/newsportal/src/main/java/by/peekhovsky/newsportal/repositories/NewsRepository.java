@@ -10,6 +10,9 @@ import java.util.Optional;
 
 public interface NewsRepository extends JpaRepository<News, Long> {
     Optional<News> findFirstById(Long id);
+
     Page<News> findAllByDateTimeBeforeOrderByDateTimeDesc(LocalDateTime dateTime, Pageable pageable);
+
+    Page<News> findAllByTitleIsContainingIgnoreCase(String request, Pageable pageable);
 }
 

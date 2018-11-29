@@ -14,7 +14,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,20 +46,8 @@ public class MainPageController {
             UserDto userDto = from(details.getUser());
             model.addAttribute("userDto", userDto);
         }
-    }
-
-    @GetMapping("/{page-num}")
-    public String getMainPage(ModelMap model,
-                              @PathVariable(value = "page-num") long pageNumber) {
-
-        List<News> news = newsService.findAllByPage(pageNumber);
-        LOGGER.debug("Get main page, news: " + news);
-        model.addAttribute("newsFromServer", news);
-        if (pageNumber > 0) {
-            model.addAttribute("previousPageNumber", pageNumber - 1);
-        }
-        model.addAttribute("nextPageNumber", pageNumber + 1);
-        return "main";
+        model.addAttribute("dateFormatter",
+                DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm"));
     }
 
     @GetMapping("/")
@@ -69,11 +59,67 @@ public class MainPageController {
         return "main";
     }
 
+    @GetMapping("/{page-num}")
+    public String getMainPage(ModelMap model,
+                              @PathVariable(value = "page-num") long pageNumber) {
+
+        List<News> news = newsService.findAllByPage(pageNumber);
+        LOGGER.debug("Get main page, news: " + news);
+        model.addAttribute("newsFromServer", news);
+        model.addAttribute("pageCount", newsService.pageCount());
+        if (pageNumber > 0) {
+            model.addAttribute("previousPageNumber", pageNumber - 1);
+        }
+        if (pageNumber < newsService.pageCount()) {
+            model.addAttribute("nextPageNumber", pageNumber + 1);
+        }
+        return "main";
+    }
+
+    @GetMapping("/search")
+    public String searchPage(ModelMap model, @RequestParam String request) {
+        if (request == null || request.isEmpty()) {
+            return "redirect:/";
+        }
+        List<News> news = newsService.findAllByTitle(request, 0);
+        LOGGER.debug("Get main page, news: " + news);
+        model.addAttribute("newsFromServer", news);
+        model.addAttribute("request", request);
+        if (newsService.pageCountSearch() > 1) {
+            model.addAttribute("nextPageNumber", 1);
+        }
+        return "main";
+    }
+
+    @GetMapping("/search/{page-num}")
+    public String searchPage(ModelMap model, @RequestParam String request,
+                             @PathVariable(value = "page-num") long pageNumber) {
+        if (request == null || request.isEmpty()) {
+            return "redirect:/";
+        }
+        List<News> news = newsService.findAllByTitle(request, pageNumber);
+        LOGGER.debug("Get main page, news: " + news);
+        model.addAttribute("newsFromServer", news);
+        model.addAttribute("pageCount", newsService.pageCountSearch());
+        if (request != null) {
+            model.addAttribute("request", request);
+        }
+        if (pageNumber > 0) {
+            model.addAttribute("previousPageNumber", pageNumber - 1);
+        }
+        if (pageNumber < newsService.pageCountSearch()) {
+            model.addAttribute("nextPageNumber", pageNumber + 1);
+        }
+        return "main";
+    }
+
+
     @GetMapping("/news/{news-id}")
     public String getNews(ModelMap model,
                           @PathVariable(value = "news-id") long newsId) {
         Optional<News> optionalNews = newsService.findById(newsId);
         if (optionalNews.isPresent()) {
+
             model.addAttribute("news", optionalNews.get());
             return "news";
         } else {

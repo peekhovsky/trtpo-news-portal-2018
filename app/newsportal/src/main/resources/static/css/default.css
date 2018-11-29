@@ -29,7 +29,7 @@ a:hover {
 }
 
 body {
-    background: #CCD8E0 url(img/bg.jpg) repeat-x left bottom;
+    background: #F0F0EB repeat-x left bottom;
     color: #444;
     font: normal 62.5% Tahoma, sans-serif
 }
@@ -91,59 +91,54 @@ h1, h2, h3 {
     width: 780px
 }
 
-/* header */
-.top {
-    padding: 50px 10px 0
-}
-
 /* title */
 .header {
     background: #FFF;
     font-size: 1.2em;
-    height: 150px;
+    height: 100px;
     margin: 0 auto;
-    padding: 10px 10px 5px;
+    padding: 10px 10px 10px 10px;
     width: 780px
 }
 
 .header .left, .header .right {
     background: #A4A4A0;
     color: #FFF;
-    height: 150px
+    align-items: center;
+    text-align: center;
+
 }
 
 .header .left {
-    background: #B3C2C7 url(img/header.jpg) no-repeat;
+    background: #B3C2C7;
     font: normal 2.8em "Trebuchet MS", sans-serif;
-    line-height: 150px;
     text-align: center;
-    width: 564px
+    width: 564px;
+    height: 100px
 }
 
 .header .right {
-    overflow: auto;
-    width: 212px
-}
-
-.header .right p, .header .right h2 {
-    padding: 0 16px
+    padding-top: 10px;
+    width: 212px;
+    height: 90px
 }
 
 .header .right h2 {
-    padding-top: 16px;
     font: normal 1.6em "Trebuchet MS", sans-serif
+}
+.header .left h1 {
+    font: normal 2em "Impact", sans-serif
 }
 
 /* navigation */
 .navigation {
-    background: #D9E1E5 url(img/nav.gif);
+    background: #ffffff;
     border: 1px solid #DFEEF7;
-    border-color: #DFEEF7 #CFDEE7;
     height: 41px
 }
 
 .navigation a {
-    background: #D9E1E5 url(img/nav.gif);
+    background: #D9E1E5;
     border-right: 1px solid #AFBEC7;
     color: #456;
     display: block;
@@ -156,22 +151,24 @@ h1, h2, h3 {
 
 .navigation a:hover {
     background-position: left bottom;
-    color: #234
+    color: #FFFFFF;
 }
 
 /* main */
 .main {
-    border-top: 4px solid #FFF;
+
 }
 
 /* sub navigation */
 .sidenav {
+    background: #ffffff;
     float: right;
-    width: 210px
+    width: 210px;
+    margin: 10px 0;
 }
 
 .sidenav h2 {
-    color: #5A5A43;
+    color: #F0F0EB;
     font-size: 1em;
     line-height: 30px;
     margin: 0;
@@ -189,7 +186,7 @@ h1, h2, h3 {
 
 .sidenav li a {
     font-size: 1.1em;
-    color: #FFF;
+    color: #223344;
     display: block;
     padding: 8px 0 8px 5%;
     text-decoration: none;
@@ -198,21 +195,19 @@ h1, h2, h3 {
 
 .sidenav li a:hover {
     background: #F0F0EB;
-    color: #654
+    color: #223344;
 }
 
 /* content */
 .content {
-    background: #FFFFFF;
     float: left;
     margin: 10px 0;
-    padding: 0 16px;
     width: 531px
 }
 
 .content .descr {
     color: #664;
-    font-size: 0.9em;
+    font-size: 1.2em;
     margin-bottom: 6px
 }
 
@@ -229,7 +224,6 @@ h1, h2, h3 {
 
 /* footer */
 .footer {
-    background: url(img/bgfooter.gif) repeat-x;
     color: #FFF;
     font: bold 1em sans-serif;
     line-height: 39px;

@@ -4,7 +4,7 @@ import by.peekhovsky.newsportal.models.news.News;
 import by.peekhovsky.newsportal.models.news.NewsForm;
 import by.peekhovsky.newsportal.models.users.User;
 import by.peekhovsky.newsportal.repositories.NewsRepository;
-import by.peekhovsky.newsportal.repositories.UsersRepository;
+import by.peekhovsky.newsportal.repositories.UserRepository;
 import by.peekhovsky.newsportal.transfer.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -21,13 +21,14 @@ public class NewsServiceImpl implements NewsService {
 
     private final NewsRepository newsRepository;
 
-    private final UsersRepository usersRepository;
+    private final UserRepository userRepository;
 
+    private int totalPagesSearch = 0;
     @Autowired
     public NewsServiceImpl(final NewsRepository newsRepository,
-                           final UsersRepository usersRepository) {
+                           final UserRepository userRepository) {
         this.newsRepository = newsRepository;
-        this.usersRepository = usersRepository;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -37,10 +38,12 @@ public class NewsServiceImpl implements NewsService {
        return page.getContent();
     }
 
+
+
     @Override
     public boolean save(NewsForm newsForm, UserDto userDto) {
         Optional<User> userOptional
-                = usersRepository.findOneByLogin(userDto.getLogin());
+                = userRepository.findOneByLogin(userDto.getLogin());
         if (userOptional.isPresent()) {
             News news = News.builder()
                     .title(newsForm.getTitle())
@@ -57,6 +60,30 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public Optional<News> findById(final Long id) {
        return newsRepository.findFirstById(id);
+    }
+
+    @Override
+    public List<News> findAllByTitle(String title, final long pageNumber) {
+        Pageable pageable = new PageRequest((int) pageNumber, 10);
+        Page<News> page = newsRepository
+                .findAllByTitleIsContainingIgnoreCase(title, pageable);
+        totalPagesSearch = page.getTotalPages();
+        return page.getContent();
+    }
+
+    @Override
+    public int pageCount() {
+        return  (int) newsRepository.count() / 10;
+    }
+
+    @Override
+    public int pageCountSearch() {
+        return  totalPagesSearch;
+    }
+
+    @Override
+    public void deleteById(long id) {
+        newsRepository.delete(id);
     }
 
 }

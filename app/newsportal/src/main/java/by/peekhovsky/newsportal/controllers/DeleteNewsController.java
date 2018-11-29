@@ -1,6 +1,5 @@
 package by.peekhovsky.newsportal.controllers;
 
-import by.peekhovsky.newsportal.models.news.NewsForm;
 import by.peekhovsky.newsportal.security.details.UserDetailsImpl;
 import by.peekhovsky.newsportal.services.NewsService;
 import by.peekhovsky.newsportal.transfer.UserDto;
@@ -10,19 +9,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import static by.peekhovsky.newsportal.transfer.UserDto.from;
 
 @Controller
-public class AddNewsController {
+public class DeleteNewsController {
 
     private final NewsService newsService;
 
-    private UserDto userDto;
-
     @Autowired
-    public AddNewsController(NewsService newsService) {
+    public DeleteNewsController(NewsService newsService) {
         this.newsService = newsService;
     }
 
@@ -31,20 +28,14 @@ public class AddNewsController {
         if (authentication != null) {
             UserDetailsImpl details
                     = (UserDetailsImpl) authentication.getPrincipal();
-            userDto = from(details.getUser());
+            UserDto userDto = from(details.getUser());
             model.addAttribute("userDto", userDto);
         }
     }
 
-    @GetMapping("/add_news")
-    public String getMainPage() {
-        return "add_news";
-    }
-
-
-    @PostMapping("/add")
-    public String addNews(NewsForm newsForm) {
-        newsService.save(newsForm, userDto);
+    @GetMapping("/delete/{news-id}")
+    public String addNews(@PathVariable(value = "news-id") long newsId) {
+        newsService.deleteById(newsId);
         return "redirect:/";
     }
 }

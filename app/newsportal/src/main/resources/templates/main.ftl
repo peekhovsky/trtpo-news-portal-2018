@@ -9,49 +9,47 @@
 <div class="top">
     <div class="header">
         <div class="left">
-            <h1>News portal</h1>
+            <ul>
+                <li>
+                    <h2>News portal</h2>
+                </li>
+                <li>
+                    <form method="get" action="/search">
+                        <#if request??>
+                            <input class="input-field" type="text" id="request" name="request"
+                                   value="${request}" placeholder="Search here...">
+                        <#else>
+                             <input class="input-field" type="text" id="request" name="request"
+                                    placeholder="Search here...">
+                        </#if>
+                    </form>
+                </li>
+            </ul>
         </div>
         <div class="right">
             <#if userDto??>
-                Signed as:<br/>
-                Login: ${userDto.login} <br/>
-                Name: ${userDto.firstName} ${userDto.lastName} <br/>
-                <form method="get" action="/add">
-                    <input type="submit" value="Add news">
-                </form>
-                <form method="get" action="/logout">
-                    <input type="submit" value="Sign out">
-                </form>
+                <h3>Login: ${userDto.login}</h3>
+                <h3>Name: ${userDto.firstName} ${userDto.lastName}</h3>
             <#else>
             <form method="post" action="/login">
-                <table>
-                    <tr>
-                    <#if auth_fail??>
-                        <td>Incorrect login or password.</td>
-                    </#if>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="login">
-                                <input class="input-field" type="text" id="login" name="login"
-                                       placeholder="Login">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="password">
-                                <input class="input-field" type="password" id="password" name="password"
-                                       placeholder="Password">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left">
-                            <input type="submit" value="Sign in">
-                        </td>
-                    </tr>
-                </table>
+                <ul>
+                <#if auth_fail??>
+                    <li>Incorrect login or password.</li>
+                <#else>
+                    <li>Sign in</li>
+                </#if>
+                    <li><label for="login">
+                        <input class="input-field" type="text" id="login" name="login"
+                               placeholder="Login">
+                    </label></li>
+                    <li><label for="password">
+                        <input class="input-field" type="password" id="password" name="password"
+                               placeholder="Password">
+                    </label></li>
+                    <li>
+                        <div class="button"><input type="submit" value="Sign in"></div>
+                    </li>
+                </ul>
             </form>
             </#if>
         </div>
@@ -59,38 +57,51 @@
 </div>
 <br/>
 <div class="container">
-    <div class="navigation">
-        <a href="#">Vestibulum</a>
-        <a href="#">Suspendisse</a>
-        <a href="#">Elemen</a>
-        <a href="#">Maecenas</a>
-        <a href="#">Sodales</a>
-        <div class="clearer"><span></span></div>
-    </div>
-    <div class="main">
-    <div class="content">
-    <#list newsFromServer as news>
 
+<#if userDto??>
+<div class="navigation">
+    <a href="/add_news">Add news</a>
+    <a href="/add_user">Add user</a>
+    <a href="/logout">Sign out</a>
+
+</div>
+</#if>
+    <div class="main">
+        <div class="content">
+    <#list newsFromServer as news>
+        <div class="news">
             <h1>${news.title}</h1>
             ${news.description}
             <br/><br/>
-            <form action="/news/${news.id}/">
-                <input type="submit" value="Read more"/>
-            </form>
-            <div class="descr">Date: ${news.dateTime}
+            <div class="descr">
+            <a href="/news/${news.id}/">Read more</a><br/>
+                    <#assign aDateTime = news.dateTime>
+                Date: ${aDateTime.format(dateFormatter)} <br/>
                 Author: ${news.author.firstName} ${news.author.lastName}
             </div>
-            <br/><br/><br/>
+            <br/>
+        </div>
+        <br/>
     </#list>
-    </div>
+        </div>
         <div class="sidenav">
             <ul>
-            <#if nextPageNumber??>
+                <#if request??>
+                     <#if nextPageNumber??>
+                         <li><a href="/search/${nextPageNumber}?request=${request}">Next page</a></li>
+                     </#if>
+                    <#if previousPageNumber??>
+                        <li><a href="/search/${previousPageNumber}/?request=${request}">Previous page</a></li>
+                    </#if>
+                <#else>
+                    <#if nextPageNumber??>
                 <li><a href="/${nextPageNumber}">Next page</a></li>
-            </#if>
-            <#if previousPageNumber??>
-                <li><a href="/${previousPageNumber}">Previous page</a></li>
-            </#if>
+                    </#if>
+                    <#if previousPageNumber??>
+                        <li><a href="/${previousPageNumber}">Previous page</a></li>
+                    </#if>
+                </#if>
+                <li><a href="/">Main page</a></li>
             </ul>
         </div>
     </div>
