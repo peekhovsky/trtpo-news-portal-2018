@@ -7,7 +7,7 @@
   2.3. [Using](#2.3)<br>
 3. [Software Risk Issues](#3)<br>
 4. [Testing](#4)<br>
-4.1. [Functional testing aspects](#4.1)<br>
+4.1. [Features to test](#4.1)<br>
   4.1.1 [Opening of main page](#4.1.1)<br>
   4.1.2.[Browsing news using numbers of pages](#4.1.2)<br>
   4.1.3.[Opening of full news page](#4.1.3)<br>
@@ -15,8 +15,9 @@
   4.1.5.[Loging out](#4.1.5)<br>
   4.1.6.[Adding news](#4.1.6)<br> 
   4.1.7.[Deleting news](#4.1.7)<br> Deleting news
-5. [Results](#5)<br>
-6. [Сonclusion](#6)<br>
+5. [Test approach]
+6. [Results](#6)<br>
+7. [Сonclusion](#7)<br>
 
 ### 1. Introduction <a name="1"></a>
 This test plan is intended to test [News portal](https://github.com/peekhovsky/trtpo-news-portal-2018/tree/master/app/newsportal) web-application. Main purpose of testing is to check software functionality and performance.
@@ -42,8 +43,8 @@ This test plan is intended to test [News portal](https://github.com/peekhovsky/t
 Application don't have perfect security system, so if user has easy to hack identification data, malefactor can access to personal data.
 
 <a name="4"></a>
-### 4. Testing aspects
-#### 4.1. Functional testing aspects
+### 4. Features to test
+#### 4.1. Functional testing
 There is main fuctional testing phases to test this application: 
 #### 4.1.1. Opening of main page
 This aspect should be tested on:
@@ -76,6 +77,7 @@ This aspect should be tested on:
 - correctly displayed delete buttons after authorisation;
 - deleting news;
 - displaying of news list without news that has been deleted.
+### 5. Test Approach 
 
 <a name="5"></a>
 ### 5. Results
