@@ -11,7 +11,6 @@ Name | Action | Expected result | Actual result
 6-2 adding news with title, description and text (allows html-insertions) | try to add news: write something in fields on adding news page and push add news button | news is appeared on main page |
 6-3 correctly displayed page after its adding (title, description, text, date, author) | add news and check all data of this news (title, description, text, date, author) | all data is valid |
 6-4 inability to add news without authorization  | try to add news using page request ".../add_news" | access denied page appeared | 
- 
 7-1 correctly displayed delete buttons after authorisation  | sign in, check delete buttons | buttons are on their places |
 7-2 deleting news  | try to delete some news, make request with this ".../news/{news-num}" | news has been dissapeared from pages and is not available from ".../news/{news-num}" request |
 7-3 inability to add news without authorization  | try to delete some news using page request ".../delete/{news-id}"" | access denied page appeared |
