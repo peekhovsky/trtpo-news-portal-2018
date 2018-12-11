@@ -97,3 +97,4 @@ a type of handling of application: positive and negative.
 Results are located in this file: [results](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/Testing/TestResults.md).
 <a name="7"></a>
 ### 7. Conclusion
+Test results are almost good. But there is a problem with compitability with Safari browser. Fortunatelly, it is easy to fix.
