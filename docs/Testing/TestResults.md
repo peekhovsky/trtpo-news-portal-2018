@@ -1,10 +1,10 @@
 Name | Action | Expected result | Actual result
 -- | -- | -- | --
 1-1 opening of main page | open main page using link | main page is opened (all web-items is it their places) | 
-2-1 opening of previous/next page user wants using page buttons | open page using previous/next number | all pages are opened | 
+2-1 opening of previous/next page user wants using page buttons | open page using previous/next number | all pages are opened 
 3-1 opening of full page any of news | open full page of news | full page of any news is opened (all web-items is it their places) |
 4-1 succesful authorization using correct identification data | authorisate using correct and incorrect login and password | succesful authorization using correct identification data, failed authorization using incorrect identification data | 
-4-3 displaying of identification data | correctly displayed identification data (name of user and login) after authorization, identification data is not displayed if user is not authorizated | 
+4-3 displaying of identification data | sign in, check identification data | correctly displayed identification data (name of user and login) after authorization, identification data is not displayed if user is not authorizated | 
 5-1 succesful loging out after pushing log out button | push log out button (is enable when user is authorized | user has been logged out | 
 5-2 correctly displayed pages after loging out (with no signs of user)  | log in, log out, try to find in web-pages signs of  user | no signs of user |
 6-1 correctly displayed adding news page | open adding news page, check availability of title text field, description and body text areas | all data is correct, all objects are on their place |
