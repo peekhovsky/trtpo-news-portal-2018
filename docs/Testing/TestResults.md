@@ -15,3 +15,4 @@ Name | Action | Expected result | Actual result
 7-2 deleting news  | try to delete some news, make request with this ".../news/{news-num}" | news has been dissapeared from pages and is not available from ".../news/{news-num}" request |
 7-3 inability to add news without authorization  | try to delete some news using page request ".../delete/{news-id}"" | access denied page appeared |
 7-4 displaying of news list without news that has been deleted  | add some news, find them on pages, delete them, check news pages | there is no deleted news on pages |
+8-1 pefrorm in all web-browsers | open and check functionality in Google Chrome, Safari, Mozilla Firefox, Microsoft Edge, Opera | all functionality of site works well using any web-browser | 
