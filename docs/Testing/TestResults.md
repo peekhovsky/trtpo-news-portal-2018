@@ -1,5 +1,5 @@
 Name | Action | Expected result | Actual result
-— | — | — | —
+-- | -- | -- | --
 1-1 opening of main page | open main page using link | main page is opened (all web-items is it their places) | Passed
 2-1 opening of previous/next page user wants using page buttons | open page using previous/next number | all pages are opened | Passed
 3-1 opening of full page any of news | open full page of news | full page of any news is opened (all web-items is it their places) | Passed
