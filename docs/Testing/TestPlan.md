@@ -87,11 +87,11 @@ This aspect should be tested on:
 - displaying of news list without news that has been deleted.
 <a name="5"></a>
 ### 5. Test Approach 
-This testing can be described by several points:
-automatization level - malual;
-khowing of the system -black box;
-component isolation level: integrational.
-work with application: positive and negative
+This testing can be described by several points:<br/>
+automatization level - malual;<br/>
+khowing of the system -black box;<br/>
+component isolation level: integrational;<br/>
+a type of handling of application: positive and negative
 <a name="6"></a>
 ### 6. Results
 Results are located in this file: [results](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/Testing/TestResults.md).
