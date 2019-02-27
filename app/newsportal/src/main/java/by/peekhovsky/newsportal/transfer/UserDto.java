@@ -1,6 +1,6 @@
 package by.peekhovsky.newsportal.transfer;
 
-import by.peekhovsky.newsportal.models.users.User;
+import by.peekhovsky.newsportal.model.users.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

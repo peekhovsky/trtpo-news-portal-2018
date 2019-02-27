@@ -1,7 +1,7 @@
 package by.peekhovsky.newsportal.security.details;
 
-import by.peekhovsky.newsportal.models.users.User;
-import by.peekhovsky.newsportal.models.users.UserState;
+import by.peekhovsky.newsportal.model.users.User;
+import by.peekhovsky.newsportal.model.users.UserState;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
