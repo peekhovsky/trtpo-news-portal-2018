@@ -15,7 +15,7 @@
   4.1.5.[Loging out](#4.1.5)<br>
   4.1.6.[Adding news](#4.1.6)<br> 
   4.1.7.[Deleting news](#4.1.7)<br>
-5. [Test approach]
+5. [Test approach](#5)<br>
 6. [Results](#6)<br>
 7. [Сonclusion](#7)<br>
 
@@ -44,43 +44,57 @@ Application don't have perfect security system, so if user has easy to hack iden
 
 <a name="4"></a>
 ### 4. Features to test
+<a name="4.1"></a>
 #### 4.1. Functional testing
 There is main fuctional testing phases to test this application: 
+<a name="4.1.1"></a>
 #### 4.1.1. Opening of main page
 This aspect should be tested on:
 - opening of main page using link;
 - correctly displayed data after loading (all web-items is it their places)
+<a name="4.1.2"></a>
 #### 4.1.2. Browsing news using numbers of pages
 This aspect should be tested on:
 - opening of any page user wants using page buttons.
+<a name="4.1.3"></a>
 #### 4.1.3. Opening of full news page
 This aspect should be tested on:
 - opening of full page any of news;
 - correctly displayed data after loading (all web-items is it their places).
+<a name="4.1.4"></a>
 #### 4.1.4. Authorization
 This aspect should be tested on:
 - succesful authorization using correct identification data;
 - failed authorization using incorrect identification data;
 - correctly displayed identification data (name of user and login) after authorization.
+<a name="4.1.5"></a>
 #### 4.1.5. Loging out
 This aspect should be tested on:
 - succesful loging out after pushing log out button.
 - correctly displayed pages after loging out (with no signs of user).
+<a name="4.1.6"></a>
 #### 4.1.6. Adding news
 This aspect should be tested on:
 - correctly displayed adding news page;
 - adding news with title, description and text (allows html-insertions);
 - correctly displayed page after its adding (title, description, text, date, author); 
 - inability to add news without authorization.
+<a name="4.1.7"></a>
 #### 4.1.7. Deleting news
 This aspect should be tested on:
 - correctly displayed delete buttons after authorisation;
 - deleting news;
 - displaying of news list without news that has been deleted.
-### 5. Test Approach 
-
 <a name="5"></a>
-### 5. Results
-Results are located in this file: [results](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/Testing/TestResults.md).
+### 5. Test Approach 
+This testing can be described by several points:<br/>
+automatization level - malual;<br/>
+khowing of the system -black box;<br/>
+component isolation level: integrational;<br/>
+a type of handling of application: positive and negative.
 <a name="6"></a>
-### 6. Conclusion
+### 6. Results
+Results are located in this file: [results](https://github.com/peekhovsky/trtpo-news-portal-2018/blob/master/docs/Testing/TestResults.md).
+<a name="7"></a>
+### 7. Conclusion
+Test results are almost good. But there is a problem with compitability with Safari browser. Fortunatelly, it is easy to fix.
